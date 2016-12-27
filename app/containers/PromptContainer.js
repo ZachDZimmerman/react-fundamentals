@@ -5,7 +5,7 @@ var PromptContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
-  getInitalState() {
+  getInitialState() {
     return {
       username:''
     }
@@ -25,13 +25,13 @@ var PromptContainer = React.createClass({
         }
       })
     } else {
-      this.context.router.push('/playerTwo' + this.state.username)
+      this.context.router.push('/playerTwo/' + this.state.username)
     }
-  }.bind(this) ,
+  },
   handleUpdateUser(event) {
     this.setState({
       username: event.target.value
-    });
+    })
   },
   render() {
     return (
